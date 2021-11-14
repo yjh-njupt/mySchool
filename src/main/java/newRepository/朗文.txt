@@ -1,3 +1,11 @@
 2021-10-7 23:25:35
 	冠词：限定词 1.有助于分类或确认的词 2.能够表示数量的词
+2021-11-15 00:13:18
+    我学会个新单词：
+    collaborators
+    Who has access:0 collaborators hava access to this repository.Only you can contribute to this repository.
+    collaborators:
+        a person who works jointly on an activity or project;an associate.
+        eg: his collaborators on the book
+        chinese (simplified):合作者
 	
