@@ -1,0 +1,40 @@
+jvm
+2021-8-1 16:55:08
+类型转换
+	操作码    说明   
+	i2l        int 2 long
+	i2f			int 2 float
+	i2d			int 2 double
+	l2i			long 2 int
+	l2f         long 2 float
+	l2d			long 2 double
+	f2i			float 2 int
+	f2l			float 2 long
+	f2d			float 2 double
+	d2i			double 2 int
+	d2l			double 2 long
+	d2f			double 2 float
+	
+	i2b			int 2 byte
+	i2c			int 2 char
+	i2s			int 2 short
+	
+	lfd -> bcs ×
+	lfd -> i -> bcs √
+	bcs -> i ×
+	
+	常见操作码：
+	iconst_0	iconst_1
+	istore_0	istore_1
+	iload_0		iload_1
+	iaddd
+	i2b
+	ireturn
+垃圾回收算法
+	引用计数收集器
+	跟踪收集器
+	压缩收集器
+	拷贝收集器
+	按代收集器
+	自适应收集器
+	火车算法

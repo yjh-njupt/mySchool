@@ -1,0 +1,79 @@
+2021/07/05
+
+今天学习的任务：
+
+搭建一个spring的环境。
+	由maven插件 搭建archetype:maven-archetype-webapp，添加java,resources文件夹
+	maven配置文件：Quartz spring-context spring-web spring-tx
+	添加需要定时工作的类jobclass交给context
+	添加spring配置文件 quartz-job.xml,配置任务类自定义bean<-任务类调度工厂Methodinvokingjobdetailfactorybean
+<-触发器CornTriggerBean<-触发器调度工厂SCHEDULERFACTORYBEAN			  web.xml中配置spring配置文件钩子文件的位置。这里由于我的文件过少，直接将quartz-job.xml放入配置文件。配置监听器ContextLoaderListener
+	配置tomcat插件，部署包
+	mvn ：编译 打包 运行
+	未完成的任务：
+		任务是不是应该阻塞的：
+		多个定时任务被触发器工厂调度
+		quartz-job存放在钩子文件中。扫包等。
+		spring容器的钩子方法。不依赖web服务器启动。
+	
+整合消息队列：
+	未完成的任务：微服务整合消息队列。
+
+SVN的使用：
+	svn下载安装msi.，服务端visualsvn,客户端tortoisesvn
+	svn创建空仓库，创建用户和组，权限控制
+	tortoisesvn 浏览仓库 远程连接 输入账户名密码 add commit update
+	svn架构
+	尚未完成的部分:
+		冲突问题与解决
+		更新到历史版本
+		delete
+		
+		ide整合svn
+		
+		svn规范：
+			svn目录规范
+			分支与标记
+			打分支或标记
+	总结：我认为目前已经对svn有了初步的认识。
+	
+2021-7-12 00:07:40
+	effective java:
+		1.考虑静态工厂方法替代构造对象。
+		2.遇到多个构造器参数是要考虑用哪个构建器
+		3.用私有类型构造器或者枚举类型强化Singleton属性。
+		4.通过私有构造器强化不可实例化的能力
+		5.避免创建不必要的对象
+		6.消除过期的对象引用
+		7.避免使用终结方法
+		
+		1.
+		2.
+2021-7-13 23:08:36  
+  gradle 
+	download http://services.gradle.org/distributions
+	配置
+		path:bin目录 repos位置
+		init.d  init.gradle
+	cmd
+		gradle -v
+	
+	idea创建gradle web框架：
+		build.gradle
+		settings.gradle:name
+	
+	留下问题：
+		使用gradle导包进行demo
+2021-7-21 23:19:12
+	redis template 从redis中读取数据，获取不到数据，就从数据库总去读取数据并存储到redis.
+	redis数据过期了，就从定时更新redis里的数据。
+	添加maven，配置spring-data-redis,redis.client,jedis
+	我们打算把redis参数放置在properties里,redis.host redis.port  redis.pass redis.database  redis.maxidle redis.wait redis.testonborrow
+	将properties,jedis实例，工厂类，redistemplate实例注册到xmL中
+	最后将xml配置监听器。
+2021-10-7 23:31:40
+	JAVA核心技术卷（二）第四章 数据库编程：1.SQL的讲解会用的跳过这部分 2. 大对象（BLOB[二进制大对象],CLOB[字符大对象]）3.使用数据库存储LOB 4.多结果集和获取自动生成键的实现 5.行集 元数据 事务
+2021-10-18 19:40:22
+
+
+  

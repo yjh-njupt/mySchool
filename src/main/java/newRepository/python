@@ -1,0 +1,16 @@
+2021-7-13 21:59:08
+
+Jupyter notebook: jupyter notebook
+shift + entry 保存发送
+<tab>  代码补全
+修改IPYTHON配置使得显示隐藏属性，包括下划线，private
+python语法：
+		列表list 数组 两者比较接近
+			属性：索引 切片 重复 链接 成员操作 for遍历 嵌套列表
+			练习：
+				列表的增删改查
+2021-7-17 23:01:04
+anaconda promt :conda info --envs
+D:\yjx2021\packageinstall\anaconda
+
+		

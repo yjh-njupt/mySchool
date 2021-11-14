@@ -1,0 +1,13 @@
+
+python 
+
+you-get -i url
+you-get url
+
+
+ffmpeg :m3u8
+
+for example:
+ffmpeg -i "https://vod2eu21.128100.xyz/hls/YaLTtejM2G7/CLS-7-v1-a1.ts?ip=47.57.233.161&exp=1626550506&hash=c276268d1c0d8147d3b9f50f2bef68bc"  -c copy -bsf:a aac_adtstoasc "果哥.mp4"
+
+<iframe width="560" height="315" src="https://cableav.tv/ik1kksPi05G/?video_embed=28335" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

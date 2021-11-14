@@ -1,0 +1,100 @@
+2021-7-13 23:39:01
+	留下问题：
+		搜索相关问题：vm安装linux,vm安装mac OS,vm安装windows
+2021-7-31 20:07:29
+	下载linux3.x 使用vmware进行安装。从头接触linux
+	
+	桥接模式：相当于虚拟机的网卡和宿主机的物理网卡均连接到虚拟机软件所提供的 VMnet0 虚拟交换机上，因此虚拟机和宿主机是平等的，相当于一个网络中的两台计算机。这种设置既可以保证虚拟机和宿主机通信，也可以和局域网内的其他主机通信，还可以连接 Internet，是限制最少的连接方式，推荐新手使用。
+NAT 模式：相当于虚拟机的网卡和宿主机的虚拟网卡 VMnet8 连接到虚拟机软件所提供的 VMnet8 虚拟交换机上，因此本机是通过 VMnet8 虚拟网卡通信的。在这种网络结构中，VMware 为虚拟机提供了一个虚拟的 NAT 服务器和一个虚拟的 DHCP 服务器，虚拟机利用这两个服务器可以连接到 Intemet。所以，在正常情况下，虚拟机系统只要设定自动获取 IP 地址，就能既和宿主机通信，又能连接到 Internet了。但是这种设置不能连接局域网内的其他主机。
+仅主机模式：宿主机和虚拟机通信使用的是 VMware 的虚拟网卡 VMnet1，但是这种连接没有 NAT 服务器为虚拟机提供路由功能，所以仅主机网络只能连接宿主机，不能连接局域网，也不能连接 Internet 网络。
+自定义网络：可以手工选择使用哪块虚拟机网卡。如果选择 Vmnet1，就相当于桥接网络；如果选择 VMnet8，就相当于 NAT 网络。
+LAN 区段：这是新版 VMware 新增的功能，类似于交换机中的 VLAN（虚拟局域网），可以在多台虚拟机中划分不同的虚拟网络。
+	
+	LINUX国内下载方法：
+	 https://developer.aliyun.com/mirror/
+	 
+	 
+	 解决静态ip问题： 
+	 https://www.linuxprobe.com/linux-see-ip.html 
+	 解决重启网络报错：
+	 https://blog.csdn.net/dongfei2033/article/details/81124465
+	 解决ping报错：
+	 https://www.cnblogs.com/hans_gis/p/10639187.html
+	 解决linux可以ping本机，本机无法ping linux
+	 https://www.cnblogs.com/AimeeCodeWorld/p/8431277.html
+	 关闭防火墙
+	 https://www.cnblogs.com/wucaiyun1/p/11765082.html
+	 
+	 
+	 linux命令行大全https://www.linuxcool.com/
+	
+	 
+	cd - 上次目录 
+	cd ~ 主目录
+	yum install net-tools  安装网络查看工具
+	dd  vi删除行
+	u vi撤回
+	uname -r 查看内核
+	clear 清屏
+2021-8-1 01:51:11
+	进行docker的安装 docker version
+	查看内核3.1 以上 uname -r 
+	删除已经安装的docker
+	一键安装 curl -fsSL https://get.docker.com | bash -s docker --mirror aliyun 
+		解释：curl可以用postman替代
+	启动docker服务端 ： systemctl daemon-reload
+						systemctl restart docker.service
+	docker常用配置：/etc/docker/daemon.json  overlay2 需要4.x内核
+			{
+		 "insecure-registries": ["192.168.2.2:8080"],
+		 "oom-score-adjust": -1000,
+		 "exec-opts": ["native.cgroupdriver=systemd"],
+		 "registry-mirrors": ["https://ucjisdvf.mirror.aliyuncs.com"],
+		 "storage-driver": "overlay2",
+		 "storage-opts": ["overlay2.override_kernel_check=true"], 
+		"log-level": "warn", 
+		"log-driver": "json-file", 
+		"log-opts": { 
+			 "max-size": "100m", 
+			 "max-file": "3" 
+		},
+		"data-root": "/home/docker" 
+		}
+		
+	python：
+	解决linux自带python 2.x我想更新到3.x：
+		https://www.cnblogs.com/weiyiyong/p/9384692.html
+	解决not sudoers:
+		https://blog.csdn.net/sinat_36118270/article/details/62899093
+		PS:修改/etc/sudoers 可以参考这个，使用vim编辑器搜索的时候，空格和TAB要区分好
+		youuser ALL=(ALL) ALL
+		%youuser ALL=(ALL) ALL
+		youuser ALL=(ALL) NOPASSWD: ALL
+		%youuser ALL=(ALL) NOPASSWD: ALL
+
+		第一行:允许用户youuser执行sudo命令(需要输入密码).
+		第二行:允许用户组youuser里面的用户执行sudo命令(需要输入密码).
+		第三行:允许用户youuser执行sudo命令,并且在执行的时候不输入密码.
+		第四行:允许用户组youuser里面的用户执行sudo命令,并且在执行的时候不输入密码.
+		
+		
+	python -v  查看版本
+	ctrl d 退出python命令行
+	su root 切换root用户
+	grep [参数] 搜索并打印
+	chmod [参数] [文件]
+	ctrl z挂起
+	/ vim中向后搜索
+	？vim中向前搜索
+	\ vim命令行转义
+	n vim中重复一次搜索
+	N 反向搜索
+	chmod [参数] [文件名] 修改权限
+	
+	
+	
+	
+	
+	
+	
+	

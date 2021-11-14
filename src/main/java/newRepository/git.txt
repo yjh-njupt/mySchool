@@ -1,0 +1,13 @@
+2021-7-17 18:18:56
+github 上拉取一个项目到vscode，提交的时候遇到了阻力，我现在需要重新提交到我自己的git仓库
+http    https://github.com/yjh-njupt/myRepository.git
+ssh    git@github.com:yjh-njupt/myRepository.git
+
+可以通过git remote add添加 remote ,git remote remove 移除remote
+git config 添加权限认证
+
+我不怎么会使用git在vs中的插件，我想我可以先用命令应付一下。
+git add filename
+git commit -m "desc"
+git push -u origin <branch-name>
+今天的命令暂时学到这里
