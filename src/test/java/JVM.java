@@ -30,19 +30,19 @@ public class JVM {
 
     @Test
     public void demo2(){
-        Class a = UnName.class;
-        ClassLoader classLoader = a.getClassLoader();
-        String s = classLoader.toString();
-        System.out.println("the UnName's classloadername is =" + s);//sun.misc.lancher$classloader@18b4aac2
-
-        AnnotatedType[] annotatedInterfaces = a.getAnnotatedInterfaces();
-
-        for (AnnotatedType ai:annotatedInterfaces
-             ) {
-            Type type = ai.getType();
-            String typeName = type.getTypeName();
-            System.out.println(typeName); //nothing happend,我以为会出现奇迹
-        }
+//        Class a = UnName.class;
+//        ClassLoader classLoader = a.getClassLoader();
+//        String s = classLoader.toString();
+//        System.out.println("the UnName's classloadername is =" + s);//sun.misc.lancher$classloader@18b4aac2
+//
+//        AnnotatedType[] annotatedInterfaces = a.getAnnotatedInterfaces();
+//
+//        for (AnnotatedType ai:annotatedInterfaces
+//             ) {
+//            Type type = ai.getType();
+//            String typeName = type.getTypeName();
+//            System.out.println(typeName); //nothing happend,我以为会出现奇迹
+//        }
     }
 
 
