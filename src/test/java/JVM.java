@@ -30,7 +30,7 @@ public class JVM {
 
     @Test
     public void demo2(){
-//        Class a = UnName.class;
+//        Test2 a = UnName.class;
 //        ClassLoader classLoader = a.getClassLoader();
 //        String s = classLoader.toString();
 //        System.out.println("the UnName's classloadername is =" + s);//sun.misc.lancher$classloader@18b4aac2

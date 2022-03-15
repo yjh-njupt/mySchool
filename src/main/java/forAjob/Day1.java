@@ -101,7 +101,7 @@ public class Day1 {
     /**
      * 创建对象的几种方式。
      *  关键字new                          使用构造器
-     *  Class newInstance()                调用构造器
+     *  Test2 newInstance()                调用构造器
      *  Constructor newInstance()           调用构造器
      *  clone                               不调用构造器
      *  反序列化                            不调用构造器
@@ -111,7 +111,7 @@ public class Day1 {
         //new
         Object o = new Object();
         System.out.println(o.hashCode());
-        //Class
+        //Test2
         try {
             Class aClass = Class.forName("forAjob.Test");
             System.out.println(aClass.hashCode());
