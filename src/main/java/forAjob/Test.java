@@ -2,14 +2,17 @@ package forAjob;
 
 import java.io.Serializable;
 
-public final class Test  implements Comparable,CharSequence, Serializable {
+public final class Test implements Comparable, CharSequence, Serializable {
     private final char value[];
     private final int hash;
+    public static final String string = "test";
+
 
     public Test() {
         value = "".toCharArray();
         hash = 0;
     }
+
     public Test(Test test) {
         value = test.value;
         hash = test.hash;
@@ -28,7 +31,7 @@ public final class Test  implements Comparable,CharSequence, Serializable {
                 char[] v2 = str.value;
                 int i = 0;
                 while (n-- != 0) {
-                    if(v1[i]!=v2[i]){
+                    if (v1[i] != v2[i]) {
                         return false;
                     }
                     i++;
@@ -39,12 +42,12 @@ public final class Test  implements Comparable,CharSequence, Serializable {
         return false;
     }
 
-    public  int hashCode(){
-        int h=hash;
+    public int hashCode() {
+        int h = hash;
         if (h == 0 && value.length > 0) {
             char[] val = value;
             for (int i = 0; i < value.length; i++) {
-                h=31*h+val[i];
+                h = 31 * h + val[i];
             }
             return h;
         }

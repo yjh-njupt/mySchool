@@ -1,10 +1,7 @@
 package forAjob;
 
 import java.lang.annotation.Annotation;
-import java.lang.reflect.AnnotatedElement;
-import java.lang.reflect.GenericDeclaration;
-import java.lang.reflect.Type;
-import java.lang.reflect.TypeVariable;
+import java.lang.reflect.*;
 
 /**
  * 重写Class newInstance方法
@@ -15,6 +12,8 @@ public final class Test2<T> implements java.io.Serializable,
         AnnotatedElement {
 
 
+    private volatile transient Constructor<T>  cachedConstructor;
+    private volatile transient Class<T> newInstanceCallerCache;
 
     public TypeVariable<?>[] getTypeParameters() {
         return new TypeVariable[0];

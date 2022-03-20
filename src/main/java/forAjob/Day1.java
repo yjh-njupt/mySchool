@@ -2,6 +2,9 @@ package forAjob;
 
 import org.junit.Test;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+
 public class Day1 {
     // 运算符 & && 使用方式的差别
     @Test
@@ -111,23 +114,37 @@ public class Day1 {
         //new
         Object o = new Object();
         System.out.println(o.hashCode());
-        //Test2
+        System.out.println("***********************");
+        //Class newInstance()
         try {
-            Class aClass = Class.forName("forAjob.Test");
-            System.out.println(aClass.hashCode());
-            Object o1 = aClass.newInstance();
-            System.out.println(o1.hashCode());
+            demo7("forAjob.Test");
+            demo7("forAjob.Test2");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InstantiationException e) {
             e.printStackTrace();
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
         }
 
     }
     public static void main(String[] args) {
 
+    }
+
+    private void demo7(String s) throws ClassNotFoundException, IllegalAccessException, InstantiationException, InvocationTargetException, NoSuchMethodException {
+        Class aClass = Class.forName(s);
+        System.out.println(aClass.hashCode());
+        Object o1 = aClass.newInstance();
+        System.out.println(o1.hashCode());
+        //注意o1的hashCode输出是0，调用我的默认参数,o1内存实际的内容是Test,o1竟然没寻错类型，或许吧，就不是根据类型寻的，
+        Constructor constructor = aClass.getConstructor();
+        Object o2 = constructor.newInstance();
+        System.out.println(o2.hashCode());
     }
 
 }
