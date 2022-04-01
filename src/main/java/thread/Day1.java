@@ -12,8 +12,18 @@ public class Day1 {
     // 守护线程
     @Test
     public void demo() {
-        Thread thread = new Thread();
-
+        //Exception in thread "main" java.lang.IllegalThreadStateException
+        System.out.println(Thread.currentThread().isDaemon());
     }
+
+    public static void main(String[] args) {
+        //Exception in thread "main" java.lang.IllegalThreadStateException
+        System.out.println(Thread.currentThread().isDaemon());
+        System.out.println();
+        Thread.currentThread().setDaemon(true);
+        System.out.println(Thread.currentThread().isDaemon());
+    }
+
+
 
 }
