@@ -6,10 +6,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.Test;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 
 public class Excel {
 
@@ -54,6 +51,7 @@ public class Excel {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         if (workbook == null) {
             throw new RuntimeException("error");
         }

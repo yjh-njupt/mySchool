@@ -176,14 +176,14 @@ public class Day1 {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        System.out.println("D:\\cache\\idea\\mySchool\\src\\main\\java\\forAjob\\1 done");
+        System.out.println("D:\\cache\\idea\\mySchool\\src\\main\\java\\forAjob\\33.xlsx done");
 
 
     }
 
 
     public void demo11() throws IOException, ClassNotFoundException {
-        FileOutputStream fos = new FileOutputStream("D:\\cache\\idea\\mySchool\\src\\main\\java\\forAjob\\1");
+        FileOutputStream fos = new FileOutputStream("D:\\cache\\idea\\mySchool\\src\\main\\java\\forAjob\\33.xlsx");
         ObjectOutputStream obos = new ObjectOutputStream(fos);
         People people = new People("teacher",5,"white","you");
         System.out.println(people.toString());
@@ -191,7 +191,7 @@ public class Day1 {
         fos.flush();
         fos.close();
         // 参考 demo10（） 这里由于对people static 进行赋值。导致后续People 共享static属性
-        FileInputStream fis = new FileInputStream("D:\\cache\\idea\\mySchool\\src\\main\\java\\forAjob\\1");
+        FileInputStream fis = new FileInputStream("D:\\cache\\idea\\mySchool\\src\\main\\java\\forAjob\\33.xlsx");
         ObjectInputStream ois = new ObjectInputStream(fis);
         People p1 = (People)ois.readObject();
         System.out.println(p1.toString());
@@ -336,7 +336,7 @@ public class Day1 {
     @Test
     public void demo10() {
         try {
-            FileInputStream fis3 = new FileInputStream("D:\\cache\\idea\\mySchool\\src\\main\\java\\forAjob\\1");
+            FileInputStream fis3 = new FileInputStream("D:\\cache\\idea\\mySchool\\src\\main\\java\\forAjob\\33.xlsx");
             ObjectInputStream ois3 = new ObjectInputStream(fis3);
             People p3 = (People)ois3.readObject();
             System.out.println(p3.toString());
