@@ -57,6 +57,13 @@
         </dependency>
 
 
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>4.0.1</version>
+        </dependency>
+
+
         <!-- slf4j 依赖包 -->
         <dependency>
             <groupId>org.slf4j</groupId>
