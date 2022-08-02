@@ -1,5 +1,11 @@
 package nio;
 
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 /**
  * @author ：yjh
  * @date ：Created in 2021/11/14 23:42
@@ -26,6 +32,12 @@ public class Day1 {
      */
     public void demo(){
 
+            ExecutorService executor = Executors.newFixedThreadPool(100);//线程池
+
+
     }
+
+
+
 
 }

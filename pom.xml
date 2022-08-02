@@ -63,6 +63,13 @@
             <version>4.0.1</version>
         </dependency>
 
+        <!--rabbitmq-->
+        <dependency>
+            <groupId>com.rabbitmq</groupId>
+            <artifactId>amqp-client</artifactId>
+            <version>3.3.5</version>
+        </dependency>
+
 
         <!-- slf4j 依赖包 -->
         <dependency>
