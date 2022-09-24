@@ -10,7 +10,7 @@
 *.ipr
 /*.iml
 *.iws
-.idea/*
+.idea/
 
 # Maven
 target/
@@ -37,4 +37,4 @@ log/
 *.tar.gz
 *.pid
 *.orig
-temp/*
+temp/
