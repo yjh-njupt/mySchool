@@ -8,7 +8,7 @@
 
 # Intellij
 *.ipr
-*.iml
+/*.iml
 *.iws
 .idea/
 
