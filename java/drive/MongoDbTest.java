@@ -1,22 +1,9 @@
 package drive;
 
-import com.mongodb.BasicDBObject;
-import com.mongodb.MongoClientSettings;
-import com.mongodb.ServerAddress;
-import com.mongodb.client.*;
-import org.bson.Document;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class MongoDbTest {
-    private static final Logger log  = LoggerFactory.getLogger(MongoDbTest.class);
+    /*private static final Logger log  = LoggerFactory.getLogger(MongoDbTest.class);
     //mongoClient连接
     protected static MongoClient mongoClient;
 
@@ -47,9 +34,7 @@ public class MongoDbTest {
        // getInstance("mongodb://admin:123456@192.168.135.131:27017/test");
         getInstance("mongodb://192.168.135.131:27017");
     }
-    /**
-     * mongodb链接到一个接口
-     */
+
     @Test
     public void demo(){
 
@@ -64,9 +49,7 @@ public class MongoDbTest {
     }
 
 
-    /**
-     *
-     */
+
     @After
     public void after(){
         if (mongoClient != null) {
@@ -77,5 +60,5 @@ public class MongoDbTest {
     @Test
     public void demo1() throws Exception{
 
-    }
+    }*/
 }
