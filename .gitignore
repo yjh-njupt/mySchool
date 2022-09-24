@@ -4,7 +4,7 @@
 # Eclipse
 .project
 .classpath
-.settings/
+.settings/*
 
 # Intellij
 *.ipr
@@ -21,10 +21,10 @@ build
 
 # Log file
 *.log
-log/
+log/*
 
 # out
-**/out/
+**/out/*
 
 # Mac
 .DS_Store
@@ -37,4 +37,4 @@ log/
 *.tar.gz
 *.pid
 *.orig
-temp/
+temp/*
